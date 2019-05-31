@@ -25,6 +25,7 @@ android {
             signingConfig signingConfigs.dummy
         }
     }
+    testBuildType "release"
 }
 
 dependencies {
