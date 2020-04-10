@@ -3,6 +3,7 @@
           package="com.example.swamp">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -28,6 +29,19 @@
         <activity
             android:name=".StorageActivity"
             android:label="StorageActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".CaseSensitiveActivity"
+            android:label="CaseSensitiveActivity"
             android:launchMode="singleInstance"
             android:theme="@style/AppTheme.NoActionBar">
 
